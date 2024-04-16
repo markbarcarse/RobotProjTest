@@ -37,6 +37,6 @@ TestFour
             Log    ${text}
     END
 
-    Log    This is a test
+    Log    This is a test commit
 
     Close browser
