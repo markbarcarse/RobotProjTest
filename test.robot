@@ -37,4 +37,6 @@ TestFour
             Log    ${text}
     END
 
+    Log    This is a test
+
     Close browser
