@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-16T16:06:22.449774" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\robot\demo\test.robot">
+<test id="s1-t1" name="TestFour" line="27">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-16T16:06:22.605217" level="INFO">Opening browser 'Chrome' to base url 'https://google.com'.</msg>
+<arg>https://google.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-16T16:06:22.605217" elapsed="3.298933"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-04-16T16:06:25.904150" elapsed="0.001004"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-16T16:06:25.905154" level="INFO">Typing text 'Best Manga sites' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>Best Manga sites</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-16T16:06:25.905154" elapsed="0.065715"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-16T16:06:25.970869" level="INFO">Clicking button 'name=btnK'.</msg>
+<arg>name=btnK</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-16T16:06:25.970869" elapsed="0.226382"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-04-16T16:06:26.846489" level="INFO">@{results} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="43264543c9868193f4fdb36c29094384", element="f.B764A47BF084594FE9291A2CB581E6B5.d.88ECE129ABA42798789DCFF27FF7FA27.e.25")&gt; ]</msg>
+<var>@{results}</var>
+<arg>//*[@id="rso"]/div</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-04-16T16:06:26.197251" elapsed="0.649238"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-16T16:06:26.894816" level="INFO">${text} = Where is the best place to read manga online?
+Reddit · r/manga
+70+ comments · 5 years ago
+The best place that is currently popular among the community is mangadex.org. Scanulators usually post their s...</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-16T16:06:26.846489" elapsed="0.048327"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-16T16:06:26.895864" level="INFO">Where is the best place to read manga online?
+Reddit · r/manga
+70+ comments · 5 years ago
+The best place that is currently popular among the community is mangadex.org. Scanulators usually post their scans onto it immediately after ...
+Level up your manga reading game in 2023: Top sites for ...
+Apr 11, 2023
+Top 10 best manga sites 2021 : r/quarantineactivities - Reddit
+Mar 4, 2021
+My review of top websites/app to read manga are ... - Reddit
+Sep 1, 2023
+Best anime and manga sites I have found! - Reddit
+Dec 24, 2022
+More results from www.reddit.com</msg>
+<arg>${text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-16T16:06:26.895864" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="43264543c9868193f4fdb36c29094384", element="f.B764A47BF084594FE9291A2CB581E6B5.d.88ECE129ABA42798789DCFF27FF7FA27.e.25")&gt;</var>
+<status status="PASS" start="2024-04-16T16:06:26.846489" elapsed="0.049375"/>
+</iter>
+<var>${element}</var>
+<value>@{results}</value>
+<status status="PASS" start="2024-04-16T16:06:26.846489" elapsed="0.049375"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-16T16:06:26.895864" elapsed="2.057513"/>
+</kw>
+<status status="PASS" start="2024-04-16T16:06:22.604214" elapsed="6.349163"/>
+</test>
+<status status="PASS" start="2024-04-16T16:06:22.450783" elapsed="6.503431"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
